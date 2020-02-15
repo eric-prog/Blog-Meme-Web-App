@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <h1>Memez</h1>
+    <div class = 'memes'>
+        {% for meme in memes %}
+            <div class = "meme">
+                <h2><a href="{% url 'memes:detail' slug=meme.slug %}">{{ meme.title }}</a></h2>
+                <p>{{ meme.snippet }}</p>
+                <p>{{ meme.date }}</p>
+                <p class="author">added by {{ meme.author.username }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

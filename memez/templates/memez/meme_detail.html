@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class = "meme-detail">
+    <div class = "meme">
+        <img src="{{ meme.thumb.url }}" alt="meme">
+        <h2>{{ meme.title }}</h2>
+        <p>{{ meme.body }}</p>
+        <p>{{ meme.date }}</p>
+        <p class="author">added by {{ meme.author.username }}</p>
+    </div>
+</div> 
+{% endblock %}
